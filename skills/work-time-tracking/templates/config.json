@@ -1,0 +1,198 @@
+{
+  "skill": "work-time-tracking",
+  "version": "3.6",
+  "log_directory": "",
+  "timezone": "+08:00",
+  "tracking": {
+    "enabled": true,
+    "auto_tracking": true,
+    "idle_threshold_minutes": 30
+  },
+  "host_events": {
+    "enabled": true,
+    "capture_user_interaction": true,
+    "capture_tool_activity": true,
+    "capture_file_activity": true,
+    "capture_session_lifecycle": true
+  },
+  "ai": {
+    "enabled": true,
+    "model_aliases": {},
+    "record_summarize_threshold_chars": 120,
+    "auto_analysis": {
+      "enabled": true,
+      "batch_interval_minutes": 20,
+      "cooldown_minutes": 10,
+      "safety_max_calls_per_day": 50,
+      "max_context_items": 20,
+      "enable_cache": true,
+      "batch_max_pending": 5
+    },
+    "manual": {
+      "enabled": true,
+      "unlimited": true
+    }
+  },
+  "summary": {
+    "enabled": true,
+    "auto_scheduled": true,
+    "stale_conversation_threshold": 3,
+    "insights": {
+      "enabled": true,
+      "stale_days": 30,
+      "top_n": 5,
+      "skill_roots": []
+    }
+  },
+  "sync": {
+    "enabled": true,
+    "skill": "ticktick-work-review",
+    "realtime": false,
+    "auto_scheduled": true
+  },
+  "log": {
+    "keep_days": 1,
+    "protect_unsynced": true
+  },
+  "settlement": {
+    "enabled": true,
+    "auto_on_conversation_end": true,
+    "skill_token_method": "injection",
+    "token_per_char": 0.28,
+    "score_enabled": true,
+    "write_raw_snapshot": true,
+    "capture_work_activities": "off",
+    "retain_days": 0
+  },
+  "storage": {
+    "structured_log_retention": "permanent",
+    "raw_log": {
+      "enabled": true,
+      "retention_days": 7
+    },
+    "daily_summary": {
+      "retention": "permanent"
+    }
+  },
+  "github": {
+    "enabled": false,
+    "repository": "worktimeLog",
+    "visibility": "private",
+    "sync_days": 1,
+    "sync_raw_logs": false,
+    "work_directory": "",
+    "remote": "origin",
+    "branch": "main",
+    "commit_message": "chore(logs): sync {date}"
+  },
+  "daily_summary": {
+    "enabled": true
+  },
+  "ticktick": {
+    "enabled": true
+  },
+  "project_map": {},
+  "role": {
+    "title": "产品经理",
+    "enabled": true,
+    "stages": [
+      "需求分析",
+      "方案设计",
+      "评审对齐",
+      "跟进落地"
+    ],
+    "deliverables": [
+      "需求文档",
+      "需求规格说明书",
+      "原型",
+      "评审结论",
+      "竞品分析",
+      "排期表",
+      "流程设计",
+      "数据口径"
+    ],
+    "product_lines": [
+      "气象数据",
+      "云浮门户",
+      "粤企知"
+    ],
+    "focus": [
+      "需求阶段分布",
+      "按产品线汇总",
+      "交付物产出",
+      "探索沉淀"
+    ]
+  },
+  "work": {
+    "categories": [
+      "工作",
+      "探索沉淀",
+      "生活",
+      "个人成长",
+      "健康运动",
+      "休闲娱乐",
+      "其他"
+    ],
+    "exploration_projects": [],
+    "exploration_keywords": [],
+    "work_types": [
+      "产品规划",
+      "需求分析",
+      "需求沟通",
+      "需求文档",
+      "竞品/行业研究",
+      "产品设计",
+      "原型设计",
+      "交互设计",
+      "数据分析",
+      "项目管理",
+      "研发协作",
+      "测试验收",
+      "上线发布",
+      "问题处理",
+      "产品运营",
+      "产品复盘",
+      "会议",
+      "方案设计",
+      "PRD编写",
+      "技术沟通",
+      "开发协作",
+      "测试验证",
+      "资料查询",
+      "其他工作"
+    ],
+    "project_stages": [
+      "需求阶段",
+      "设计阶段",
+      "开发阶段",
+      "测试阶段",
+      "上线阶段",
+      "运营/迭代阶段",
+      "其他",
+      "需求分析",
+      "方案设计",
+      "交互设计",
+      "原型设计",
+      "PRD编写",
+      "技术沟通",
+      "开发协作",
+      "测试验证",
+      "问题排查",
+      "上线发布",
+      "运营维护"
+    ]
+  },
+  "security": {
+    "strict_mode": true,
+    "allow_browser_access": false,
+    "allow_clipboard_access": false,
+    "allow_password_manager_access": false,
+    "allow_full_disk_scan": false,
+    "allow_arbitrary_shell": false,
+    "redact_sensitive": true,
+    "max_activity_length": 200,
+    "max_detail_length": 4000,
+    "ai_summarize": true,
+    "ai_summarize_timeout_sec": 6
+  }
+}
