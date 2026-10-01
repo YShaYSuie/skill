@@ -7,6 +7,7 @@ Public collection of reusable Agent Skills.
 | Skill | Description |
 | --- | --- |
 | [`work-time-tracking`](skills/work-time-tracking/) | Work activity tracking, AI usage attribution, and daily/weekly/monthly reviews. |
+| [`ticktick-work-review`](skills/ticktick-work-review/) | TickTick task synchronization, completion matching, work backfill, and review workflows. |
 
 ## Repository Layout
 
