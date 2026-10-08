@@ -1,0 +1,45 @@
+name: md-to-word
+version: "2.5"
+description: 文档标准化与 Word 生成 Skill。支持 Markdown 转 Word、Word 样式标准化、Word 结构与样式标准化、Word 模板迁移，以及按公司或项目 Word 模板整理 Markdown。模板提供视觉样式与最终自动编号，AI 负责必要的结构与语义安全判断。
+
+capabilities:
+  provide:
+    - markdown-to-word
+    - word-style-standardize
+    - word-structure-standardize
+    - word-template-migrate
+    - inline-format-parsing
+    - cjk-punctuation-normalize
+    - template-style-completion
+    - explicit-warnings
+  optional-enhancement:
+    - custom-template
+    - standardized-md-output
+
+# 能力说明（仅供人阅读；机器解析以上清单）
+# - markdown-to-word: 检查 Markdown 结构、标准化章节编号，按 Word 模板生成 .docx
+# - word-style-standardize: 保留原 Word 内容结构，程序化映射到模板样式（Level 1）
+# - word-structure-standardize: 分析章节/列表/表格/标题层级后重新标准化（Level 2）
+# - word-template-migrate: 内容来自原 Word、样式来自目标模板的重排（Level 3）
+# - inline-format-parsing: 加粗/斜体/删除线/行内代码/font 颜色转 Word run；代码块跳过；未闭合标记保留并告警
+# - cjk-punctuation-normalize: 中文语境成对 ASCII 引号转弯引号；路径/URL/命令/纯英文保护
+# - template-style-completion: 模板缺 Quote/Code 样式时在副本中程序化创建，动作写入 warnings
+# - explicit-warnings: 表格解析不一致、未闭合标记、样式降级/补全、未知 HTML 均写入 warnings，禁止静默降级
+# - custom-template: 用户提供任务专用模板或模板库模板；缺失时回落 default.docx
+# - standardized-md-output: 用户明确要求时输出 xxx.standardized.md 中间稿
+
+input:
+  - Markdown 文件（.md）
+  - Word 文件（.docx）
+  - 可选：Word 模板（.docx）
+
+output:
+  - Word 文档（.docx）
+  - JSON 结果报告（含 number_hints、warnings、counts、missing_images）
+  - 可选：标准化 Markdown 稿（.standardized.md，仅用户要求）
+
+events: []
+
+environment:
+  optional:
+    - python3-runtime
